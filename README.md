@@ -1,2 +1,2 @@
 # web3-resources
-A Collection of Resources around major web3 topics!
+A Collection of resources to learn major web3 topics
