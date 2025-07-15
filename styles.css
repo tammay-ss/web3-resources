@@ -34,9 +34,6 @@ div{
     transition: transform 0.3s ease;
 }
 
-div:hover{
-    transform: scale(1.025);
-}
 
 ul, li{
     margin: 0;
@@ -68,10 +65,7 @@ nav:hover .main{
     background-color: rgba(78, 77, 77, 0.712);
 }
 
-/* a{
-    color:antiquewhite;
-    transition-duration: ;
-} */
+
 
 .main li{
     background-color: #222;
@@ -111,14 +105,13 @@ span:not(.heading){ /* styling all <span> elements except for heading class*/
     transition: transform 0.3s ease;
 }
 
-span:not(.heading):hover{
-    transform:translateY(10px);
-}
+
 
 .btn{
     box-sizing: border-box;
     border: 2px solid white; /*without border-width and border-type, no border, in short, without this:no border*/
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 3px;
     background-color: white;
     transition: transform 0.3s ease;
 }
