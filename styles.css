@@ -1,0 +1,168 @@
+body{
+    background-color:black;
+}
+
+h1{
+    color: bisque;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+section{
+    box-sizing: border-box;
+    background-color:antiquewhite;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateX(20px); /* Slides 20px right */
+}
+
+
+div{
+    box-sizing: border-box;
+    background-color: aliceblue;
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+div:hover{
+    transform: scale(1.025);
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    position: fixed;
+    left:0;
+    top:0;
+    color:antiquewhite;
+    background-color:#181818;
+}
+
+nav .main{
+    display: none; /*won't be displayed*/
+}
+
+nav:hover .main{
+    display:block; /*displayed*/
+    list-style:none;
+}
+
+.main .nested{
+    display:none;
+}
+.main li:hover .nested{
+    display:block;
+    list-style: none;
+    background-color: rgba(78, 77, 77, 0.712);
+}
+
+/* a{
+    color:antiquewhite;
+    transition-duration: ;
+} */
+
+.main li{
+    background-color: #222;
+    color:antiquewhite;
+    transition: background-color 0.3s ease;
+}
+
+.nested li{
+    background-color: rgba(78, 77, 77, 0.712);
+    transition: background-color 0.3s ease;
+}
+
+.main li:hover{
+    background-color: aliceblue;
+} 
+
+.main li > a { /*<a> is child of what??==> .main k andar <li>, <li> k andar wale <a> ki styling*/
+    color: antiquewhite;
+    transition: color 0.3s;
+    outline-color: transparent;
+}
+
+.main li:hover > a,
+.main li:has(.nested:hover) > a {
+    color: #181818; /* black */
+}
+
+span:not(.heading){ /* styling all <span> elements except for heading class*/
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 196, 108, 0.852);; /*border-width border-styles border-color */
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(255, 196, 108, 0.852);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+    padding-top: 5px;
+    display:block; /*span is not a block element like <div>, it is an inline element, so make sure to convert it to block*/
+    transition: transform 0.3s ease;
+}
+
+span:not(.heading):hover{
+    transform:translateY(10px);
+}
+
+.btn{
+    box-sizing: border-box;
+    border: 2px solid white; /*without border-width and border-type, no border, in short, without this:no border*/
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.125);
+}
+
+section li>a{
+    text-decoration: none; /*removes the underline*/
+}
+
+section li{
+    margin: 10px;
+    display: flex;
+}
+
+section li>a:visited{
+    color: red;
+}
+
+h3{
+    display: inline-block; /*doesn't start on newline line block(inline also doesn't start on new line, but we can margin and padding etc(unline inline which don't allow*/
+    border-bottom: 5px solid black;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
+.heading {
+  display:flex;
+  justify-content: center;
+}
+.heading h1 {  /*https://dev.to/afif/a-scalable-css-only-typewriter-effect-2opn*/
+  word-break: break-all;
+  height: 1.2em;
+  width:0%;
+  overflow: hidden;
+  animation:t 5s linear infinite alternate;
+}
+.heading h1:before {
+  content:" ";
+  display:inline-block;
+}
+@keyframes t{
+  90%,100% {width:100%}
+}
+
